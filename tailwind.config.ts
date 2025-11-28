@@ -57,6 +57,17 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        cyber: {
+          glow: "hsl(var(--cyber-glow))",
+          green: "hsl(var(--cyber-green))",
+          purple: "hsl(var(--cyber-purple))",
+          dark: "hsl(var(--cyber-dark))",
+          darker: "hsl(var(--cyber-darker))",
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'Courier New', 'monospace'],
       },
       borderRadius: {
         lg: "var(--radius)",
