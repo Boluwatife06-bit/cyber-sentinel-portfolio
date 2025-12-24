@@ -10,7 +10,8 @@ const projects = [
     description: "Built and secured an Ubuntu server from the ground up, applying best practices in system hardening, user access control, and performance optimization. Implemented firewall rules, SSH hardening, and Fail2Ban for brute-force protection.",
     tools: ["Ubuntu Server", "UFW", "SSH", "Fail2Ban", "Cloudflare Tunnel"],
     color: "primary",
-    highlights: ["System Hardening", "Firewall Config", "Brute-force Protection"]
+    highlights: ["System Hardening", "Firewall Config", "Brute-force Protection"],
+    github: "https://github.com/Boluwatife06-bit/ssh-project.git"
   },
   {
     title: "SSH Brute Force Simulation",
@@ -18,7 +19,8 @@ const projects = [
     description: "Simulated SSH brute-force attacks using Hydra and msfconsole on an Ubuntu server to test password strength, logging, and intrusion detection. Implemented countermeasures and documented results.",
     tools: ["Hydra", "msfconsole", "Ubuntu Server", "Fail2Ban"],
     color: "secondary",
-    highlights: ["Attack Simulation", "Intrusion Detection", "Security Hardening"]
+    highlights: ["Attack Simulation", "Intrusion Detection", "Security Hardening"],
+    github: null
   },
   {
     title: "Web Application Penetration Testing",
@@ -26,7 +28,8 @@ const projects = [
     description: "Collaborated with a web developer to perform a full-scale penetration test on a live web application. Identified open directories, clickjacking vulnerabilities, and other potential threats.",
     tools: ["Burp Suite", "OWASP ZAP", "Nmap", "Nikto", "Gobuster"],
     color: "accent",
-    highlights: ["Full Pentest", "Vulnerability Discovery", "Remediation Support"]
+    highlights: ["Full Pentest", "Vulnerability Discovery", "Remediation Support"],
+    github: "https://github.com/Boluwatife06-bit/Pentest-Tool.git"
   }
 ];
 
@@ -118,14 +121,29 @@ const Projects = () => {
 
                 {/* Action buttons */}
                 <div className="flex gap-3 mt-6 pt-4 border-t border-border">
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg bg-card border border-border hover:border-primary/50 hover:bg-primary/5 transition-all"
-                  >
-                    <Github className="w-4 h-4" />
-                    Code
-                  </motion.button>
+                  {project.github ? (
+                    <motion.a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg bg-card border border-border hover:border-primary/50 hover:bg-primary/5 transition-all"
+                    >
+                      <Github className="w-4 h-4" />
+                      Code
+                    </motion.a>
+                  ) : (
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg bg-card border border-border opacity-50 cursor-not-allowed"
+                      disabled
+                    >
+                      <Github className="w-4 h-4" />
+                      Code
+                    </motion.button>
+                  )}
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
