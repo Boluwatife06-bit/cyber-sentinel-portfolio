@@ -75,8 +75,8 @@ const Navigation = () => {
                 <Shield className="h-8 w-8 text-primary transition-all duration-300 group-hover:drop-shadow-[0_0_10px_hsl(var(--primary))]" />
                 <div className="absolute inset-0 bg-primary/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
-              <span className="font-mono font-bold text-lg text-foreground">
-                BOLUWATIFE<span className="text-primary">.SEC</span>
+              <span className="font-bold text-lg text-foreground">
+                Ajayi Boluwatife
               </span>
             </motion.a>
 
