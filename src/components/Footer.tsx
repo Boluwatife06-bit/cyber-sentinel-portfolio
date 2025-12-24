@@ -23,9 +23,8 @@ const Footer = () => {
             className="flex items-center gap-2"
           >
             <Shield className="w-6 h-6 text-primary" />
-            <span className="text-xl font-bold font-mono">
-              <span className="text-primary">BOLUWATIFE</span>
-              <span className="text-secondary">.SEC</span>
+            <span className="text-xl font-bold">
+              Ajayi Boluwatife
             </span>
           </motion.div>
 
